@@ -1,0 +1,17 @@
+pretrained/encodec-checkpoint
+pretrained/google-mt5-base-checkpoint
+pretrained/hubert-base-checkpoint
+pretrained/vocos-encodec-24khz
+pretrained/voxinstruct-sft-checkpoint
+
+eval/
+exps/
+examples_other/
+configs_internal/
+start.sh
+.DS_Store
+__pycache__
+
+lj_text_mini.txt
+ljspeech_vox_files_mini.txt
+req.txt
