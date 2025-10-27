@@ -1,3 +1,5 @@
+packaging
+ninja
 fairseq
 encodec
 transformers
