@@ -5,7 +5,7 @@ CUDA_VISIBLE_DEVICES=0 python inference.py \
     --nar_config configs/train_nar.yaml \
     --ar_ckpt pretrained/voxinstruct-sft-checkpoint/ar_1800k.pyt \
     --nar_ckpt /mnt/efs1/leon/vox_runs/07_23_2025_15_07_57/checkpoints/2990k_ckpt.pyt \
-    --synth_file ljspeech_vox_files_mini.txt \
+    --synth_file ljspeech_vox_files.txt \
     --out_dir results/lj-vox-1800-1800  \
     --device cuda \
     --vocoder vocos \
@@ -19,4 +19,4 @@ python calc_metrics.py \
     --model_audio_path results/lj-vox-1800-1800 \
     --eval_path results/eval-1800-1800.csv \
     --rtf_path results/rtf-1800-1800.json \
-    --dataset_path /home/leon/LJSpeech
+    --dataset_path dataset

@@ -37,14 +37,8 @@ if __name__ == "__main__":
     df = pd.DataFrame(columns=['ID', 'WER', 'MCD', 'PESQ', 'STOI'])
     model_audio_path = args.model_audio_path
     eval_path = args.eval_path
-    dataset = LJDataset(data_path=args.dataset_path, partition_file='lj_text_mini.txt')
+    dataset = LJDataset(data_path=args.dataset_path, partition_file='lj_text.txt')
     dataloader = DataLoader(dataset=dataset, batch_size=1)
-
-
-    #model_audio_path = "/home/leon/lj-como-10"
-    #eval_path = 'CoMoSpeech/lj-como-10-eval.csv'
-    #dataset = LJDataset(data_path='/home/leon/LJSpeech', partition_file='gradimm/resources/filelists/ljspeech/test.txt')
-    #dataloader = DataLoader(dataset=dataset, batch_size=1)
 
     # get whisper
     whisper = wer.get_model()
@@ -78,7 +72,6 @@ if __name__ == "__main__":
         s += item['rtf']
 
     print(f"RTF: {s/len(rtf_dict)}")
-
     print(f"WER: {df['WER'].mean()}")
     print(f"MCD: {df['MCD'].mean()}")
     print(f"PESQ: {df['PESQ'].mean()}")
