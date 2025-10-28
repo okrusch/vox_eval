@@ -2,6 +2,13 @@ pretrained/encodec-checkpoint
 pretrained/google-mt5-base-checkpoint
 pretrained/hubert-base-checkpoint
 pretrained/vocos-encodec-24khz
+pretrained/encodec-checkpoint.zip
+pretrained/google-mt5-base-checkpoint.zip
+pretrained/hubert-base-checkpoint.zip
+pretrained/vocos-encodec-24khz.zip
+pretrained/1900k_ckpt.pyt
+pretrained/1900k_ckpt.zip
+pretrained/voxinstruct-sft-checkpoint.zip
 pretrained/voxinstruct-sft-checkpoint
 
 eval/

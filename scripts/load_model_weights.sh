@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cd /home/workspace/vox_eval/pretrained
 
 # vocos-encodec-24khz.zip
