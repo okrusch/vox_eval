@@ -55,7 +55,7 @@ if __name__ == "__main__":
             p = t_pesq.get_pesq(ref_path[0], target_file)
             s = stoi.get_stoi(ref_path[0], target_file)
 
-            df.loc[len(df)] = [id, w, m, p, s]
+            df.loc[len(df)] = [id[0], w, m, p, s]
         except:
             pass
 
@@ -63,13 +63,21 @@ if __name__ == "__main__":
     df.to_csv(eval_path, index=False)
 
     # calculate rtf
-    if os.path.exists(args.rtf_path):  
+    if os.path.exists(args.rtf_path): 
         with open(args.rtf_path, 'r') as f:  
             rtf_dict = json.load(f)
 
     s = 0 
     for item in rtf_dict:
         s += item['rtf']
+
+    
+    with open(f"{model_audio_path}.txt", "w") as f:
+        f.write(f"RTF: {s/len(rtf_dict)}\n")
+        f.write(f"WER: {df['WER'].mean()}\n")
+        f.write(f"MCD: {df['MCD'].mean()}\n")
+        f.write(f"PESQ: {df['PESQ'].mean()}\n")
+        f.write(f"STOI: {df['STOI'].mean()}\n")
 
     print(f"RTF: {s/len(rtf_dict)}")
     print(f"WER: {df['WER'].mean()}")

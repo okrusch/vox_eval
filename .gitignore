@@ -11,6 +11,8 @@ pretrained/1900k_ckpt.zip
 pretrained/voxinstruct-sft-checkpoint.zip
 pretrained/voxinstruct-sft-checkpoint
 
+scripts/run_eval_test.sh
+
 eval/
 exps/
 examples_other/
@@ -23,3 +25,5 @@ lj_text_mini.txt
 ljspeech_vox_files_mini.txt
 req.txt
 copy_lj_test.py
+
+results
