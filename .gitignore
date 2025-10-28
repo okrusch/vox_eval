@@ -15,3 +15,4 @@ __pycache__
 lj_text_mini.txt
 ljspeech_vox_files_mini.txt
 req.txt
+copy_lj_test.py

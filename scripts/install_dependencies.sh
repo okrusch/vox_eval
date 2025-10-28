@@ -1,3 +1,5 @@
 #!/bin/bash
-pip install torch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121
+# Install dependencies
+pip install flash-attn --no-build-isolation
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
 pip install -r requirements.txt
